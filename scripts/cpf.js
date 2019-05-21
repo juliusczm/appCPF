@@ -6,11 +6,8 @@ btnG.addEventListener('click', btnGlistener);
 
 function btnGlistener(event) {
 	event.preventDefault();
-
 	var newcpf = geraCpf();
-
-	var input = document.getElementById('cpf');
-    
+	var input = document.getElementById('cpf'); 
 	input.value = newcpf;
 	
 }
@@ -51,7 +48,7 @@ function verificaCPF(cpf) {
 function calculaDV1(cpf) {
 	var pesos = [10,9,8,7,6,5,4,3,2];
 	var soma = 0;
-	for(var i = 0; i<9;i++){
+	for(let i = 0; i<9;i++){
 		soma = soma + (pesos[i]* Number(cpf[i]) );
 	}
 	var resto = soma%11;
@@ -64,7 +61,7 @@ function calculaDV1(cpf) {
 function calculaDV2(cpf) {
 	var pesos = [11,10,9,8,7,6,5,4,3,2];
 	var soma = 0;
-	for(var i = 0; i<10;i++){
+	for(let i = 0; i<10;i++){
 		soma = soma + (pesos[i]* Number(cpf[i]) );
 	}
 	var resto = soma%11;
